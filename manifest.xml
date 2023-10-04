@@ -120,5 +120,5 @@
             <name>ICameraProvider</name>
             <instance>external/0</instance>
         </interface>
-    </hal>    
+    </hal>
 </manifest>

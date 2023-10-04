@@ -1,6 +1,21 @@
 <ExternalCamera>
     <Provider>
-        <id>0</id>
+        <ignore> <!-- Internal video devices to be ignored by external camera HAL -->
+            <id>10</id> <!-- No leading/trailing spaces -->
+            <id>11</id>
+            <id>12</id>
+            <id>13</id>
+            <id>14</id>
+            <id>15</id>
+            <id>16</id>
+            <id>18</id>
+            <id>19</id>
+            <id>20</id>
+            <id>21</id>
+            <id>22</id>
+            <id>23</id>
+            <id>31</id>
+        </ignore>
     </Provider>
     <Device>
         <!-- Max JPEG buffer size in bytes-->
