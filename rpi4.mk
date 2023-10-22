@@ -26,14 +26,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     packages/apps/Car/AOSPHost/com.android.car.templates.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.car.templates.host.xml
 
-
-PRODUCT_PRODUCT_PROPERTIES += persist.automotive.evs.mode=0
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.type=automotive \
-    config.disable_cameraservice=false
-
-
 # EVS v1.1
 PRODUCT_PACKAGES += android.automotive.evs.manager.fuzzlib \
                     android.hardware.automotive.evs@1.1-sample \
@@ -73,6 +65,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.type=automotive \
+    persist.automotive.evs.mode=0
 
 
 PRODUCT_NAME := rpi4
